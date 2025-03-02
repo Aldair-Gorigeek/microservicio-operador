@@ -1,0 +1,27 @@
+server:
+  port: 8082  # Puerto donde correrá el microservicio operador
+
+spring:
+  application:
+    name: microservicio-operador
+
+  datasource:
+    url: jdbc:mysql://mysql:3306/tienda  # Se cambia localhost por mysql (nombre del contenedor)
+    username: root
+    password: root  # Se ajusta al valor usado en Docker
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # Para que cree las tablas automáticamente
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/  # Se cambia localhost por eureka-server
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
