@@ -1,0 +1,6 @@
+com\tienda\operador\model\Operacion.class
+com\tienda\operador\dto\ItemDTO.class
+com\tienda\operador\client\BuscadorClient.class
+com\tienda\operador\repository\OperacionRepository.class
+com\tienda\operador\controller\OperacionController.class
+com\tienda\operador\MicroservicioOperadorApplication.class
